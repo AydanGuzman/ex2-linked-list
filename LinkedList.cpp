@@ -10,28 +10,38 @@ public:
     // Function to insert a node at the beginning of the linked list
     void insertAtBeginning(int value) {
         Node* newNode = new Node(value);
-        /***
-         * Insert your code here
-        */
+        newNode->next = head;
+        head = newNode;
 
     }
 
     // Function to insert a node at the end of the linked list
     void insertAtEnd(int value) {
         Node* newNode = new Node(value);
-
-        /***
-         * Insert your code here
-        */
+   
+        Node* current = head;
+        while (current->next) current = current->next;
+        current->next = new Node(value);
+       
     }
 
     // Function to insert a node at a specific position in the linked list
     void insertAtPosition(int value, int position) {
-        Node* newNode = new Node(value);
+        
+        Node* current = head;
+        for (int i = 0; current && i < position - 1; ++i) {
+            current = current->next;
+        }
 
-        /***
-         * Insert your code here
-        */
+        if (current) {
+            Node* newNode = new Node(value);
+            newNode->next = current->next;
+            current->next = newNode;
+        }
+        
+        
+
+      
     }
 
     // Function to print the linked list

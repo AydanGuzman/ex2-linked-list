@@ -1,3 +1,9 @@
+/** 
+Aydan Guzman
+Programming assignment 2
+Inserting a node at a specific position in a linked list
+COSC 2415 PF III Data Structures 
+*/ 
 #include <iostream>
 #include "LinkedList.cpp"
 
@@ -19,3 +25,4 @@ int main() {
 
     return 0;
 }
+
